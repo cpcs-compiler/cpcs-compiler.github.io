@@ -1,0 +1,13 @@
+{% extends "layout.ja.njk" %}
+
+{% block main %}
+            <h2 class="wip">🚧工事中🚧</h2>
+            <h2>コントリビューター</h2>
+            <div id="contrib"></div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        fetchContributors();
+    </script>
+{% endblock %}

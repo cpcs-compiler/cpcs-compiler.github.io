@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+
+{% block main %}
+    <h2 class="wip">🚧Work in progress🚧</h2>
+    <h2>Links</h2>
+    <ul>
+        <li><a href="https://discordapp.com/invite/3Qm8xDp">Cpcdos Discord</a> (french)</li>
+        <li><a href="https://www.developpez.net/forums/f2044/systemes/autres-systemes/cpcdos/">Cpcdos forum</a> (french)</li>
+    </ul>
+
+    <h2>Contributors</h2>
+    <div id="contrib"></div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        fetchContributors();
+    </script>
+{% endblock %}
