@@ -1,46 +1,63 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+$border-color: #69ff8c;
+$background-color: #eaffef;
+
 html, body {
     margin: 0;
 }
 
 html {
     font-family: 'Roboto', sans-serif;
+    background-color: $background-color;
 }
 
-img.retromoji {
-    image-rendering: crisp-edges;
-    height: 32px;
-}
+img {
+    &.retromoji {
+        image-rendering: crisp-edges;
+        height: 32px;
+        
+        &.mini {
+            height: 16px;
+        }
+    }
 
-img.retromoji.mini {
-    height: 16px;
+    &.contributor {
+        border-left: 4px $border-color solid;
+        margin: 5px;
+        height: 96px;
+        
+        &:hover {
+            transform: rotate(-8deg);
+            -webkit-transform: rotate(-8deg);
+            -moz-transform: rotate(-8deg);
+            -o-transform: rotate(-8deg);
+        }
+    }
 }
 
 a {
     text-decoration: none;
-}
-
-a img.retromoji{
-    float: left;
-    margin: 15px 4px;
-    transition: margin 0.5s ease-out;
-    -webkit-transition: margin 0.5s ease-out;
-    -moz-transition: margin 0.5s ease-out;
-    -o-transition: margin 0.5s ease-out;
-}
-
-a img.retromoji:hover {
-    margin-top: 2px;
-}
-
-a.disabled
-{
-    img {
-        filter: grayscale(1);
-
+    
+    img.retromoji {
+        float: left;
+        margin: 15px 4px;
+        transition: margin 0.5s ease-out;
+        -webkit-transition: margin 0.5s ease-out;
+        -moz-transition: margin 0.5s ease-out;
+        -o-transition: margin 0.5s ease-out;
+        
         &:hover {
-            margin-top: 15px;
+            margin-top: 2px;
+        }
+    }
+    &.disabled {
+        img {
+            filter: grayscale(1);
+            
+            &:hover {
+                margin-top: 15px;
+            }
         }
     }
 }
@@ -61,36 +78,30 @@ a.disabled
 }
 
 main {
+    background-color: white;
     margin: 0 15%;
     padding: 0 5px;
-    border-left: 4px solid salmon;
-    border-right: 4px solid salmon;
+    border-left: 4px solid $border-color;
+    border-right: 4px solid $border-color;
 }
 
 .highlight {
     padding: 0 12px;
 }
 
-img.contributor {
-    border-left: 4px salmon solid;
-    margin: 5px;
-    height: 96px;
-}
-
-img.contributor:hover {
-    transform: rotate(-8deg);
-    -webkit-transform: rotate(-8deg);
-    -moz-transform: rotate(-8deg);
-    -o-transform: rotate(-8deg);
-}
-
-div.error {
+.error {
     padding: 5px;
     color: white;
     background-color: rgb(148, 57, 57);
     border-radius: 2px;
+    
+    img {
+        margin: 0 5px;
+    }
 }
 
-div.error img {
-    margin: 0 5px;
+footer {
+    position: fixed;
+    bottom: 0;
+    margin: 5px;
 }
