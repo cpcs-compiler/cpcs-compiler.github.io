@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html, body {
+    margin: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+img.retromoji {
+    image-rendering: crisp-edges;
+    height: 32px;
+}
+
+img.retromoji.mini {
+    height: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a img.retromoji{
+    float: left;
+    margin: 15px 4px;
+    transition: margin 0.5s ease-out;
+    -webkit-transition: margin 0.5s ease-out;
+    -moz-transition: margin 0.5s ease-out;
+    -o-transition: margin 0.5s ease-out;
+}
+
+a img.retromoji:hover {
+    margin-top: 2px;
+}
+
+.clear { clear:both; }
+
+#pride {
+    display: none;
+    background-color: salmon;
+    color: white;
+    padding: 15px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+main {
+    margin: 0 15%;
+    padding: 0 5px;
+    border-left: 4px solid salmon;
+    border-right: 4px solid salmon;
+}
+
+.highlight {
+    padding: 0 12px;
+}
+
+img.contributor {
+    border-left: 4px salmon solid;
+    margin: 5px;
+    height: 96px;
+}
+
+img.contributor:hover {
+    transform: rotate(-8deg);
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+}
+
+div.error {
+    padding: 5px;
+    color: white;
+    background-color: rgb(148, 57, 57);
+    border-radius: 2px;
+}
+
+div.error img {
+    margin: 0 5px;
+}

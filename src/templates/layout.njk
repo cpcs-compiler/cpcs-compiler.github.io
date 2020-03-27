@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ lang or "en" }}">
+    <head>
+        <meta charset="utf-8">
+
+        <title>CpcSC - {{ title }}</title>
+
+        <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="assets/highlight.css">
+    </head>
+    <body>
+        <div id="pride">
+            <h2>Happy pride month !</h2>
+            <img class="retromoji" src="https://d0p1s4m4.github.io/retromoji/img/flag_lesbian.png" aria-label="Lesbian Pride">
+            <img class="retromoji" src="https://d0p1s4m4.github.io/retromoji/img/flag_lgbt.png" aria-label="Gay Pride">
+            <img class="retromoji" src="https://d0p1s4m4.github.io/retromoji/img/flag_bi.png" aria-label="Bisexual Pride">
+            <img class="retromoji" src="https://d0p1s4m4.github.io/retromoji/img/flag_trans.png" aria-label="Transgender Pride">
+            <img class="retromoji" src="https://d0p1s4m4.github.io/retromoji/img/flag_non_binary.png" aria-label="Non-Binary Pride">
+            <img class="retromoji" src="https://d0p1s4m4.github.io/retromoji/img/flag_intersex.png" aria-label="Intersex Pride">
+        </div>
+        <div id="alt-lang">
+            <a aria-disabled="true">
+                <img class="retromoji" src="https://d0p1s4m4.github.io/retromoji/img/black_flag.png" aria-label="english">
+            </a>
+            <a href="index.fr.html">
+                <img class="retromoji" src="https://d0p1s4m4.github.io/retromoji/img/flag_france.png" aria-label="french">
+            </a>
+            <a href="index.ja.html">
+                <img class="retromoji" src="https://d0p1s4m4.github.io/retromoji/img/flag_japan.png" aria-label="japanese">
+            </a>
+            <div class="clear"></div>
+        </div>
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+        <footer>
+            <img class="retromoji mini" src="https://d0p1s4m4.github.io/retromoji/img/copyleft.png" aria-label="copyleft"> 2020 <a href="">d0p1</a>
+        </footer>
+    </body>
+
+    <script src="assets/script.js"></script>
+    <script>
+        class Date {
+            getMonth() { return 5; }
+        }
+        init();
+    </script>
+</html>
