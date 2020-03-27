@@ -34,6 +34,17 @@ a img.retromoji:hover {
     margin-top: 2px;
 }
 
+a.disabled
+{
+    img {
+        filter: grayscale(1);
+
+        &:hover {
+            margin-top: 15px;
+        }
+    }
+}
+
 .clear { clear:both; }
 
 #pride {

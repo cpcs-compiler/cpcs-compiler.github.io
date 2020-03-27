@@ -30,7 +30,7 @@ const buildHtml = () =>
     .pipe(dest("./dist"))
     .pipe(browsersync.reload({ stream: true }));
 
-watch(["src/pages/*.njk"], buildHtml);
+watch(["src/pages/*.njk", "src/templates/*.njk"], buildHtml);
 watch(["src/scripts/*.ls"], buildJs);
 watch(["src/scss/*.scss", "src/scss/**/*.scss"], buildCss);
 watch(["dist/*"]).on("change", browsersync.reload);
