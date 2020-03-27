@@ -1,0 +1,21 @@
+{% macro tr(en, fr, ja) %}
+    {% if lang == "fr" %}
+        {{fr}}
+    {% elif lang == "ja" %}
+        {{ja}}
+    {% else %}
+        {{en}}
+    {% endif %}
+{% endmacro %}
+
+{% macro trfile(file) %}
+    {{ file }}{% if lang %}.{{ lang }}{% endif %}.html
+{% endmacro %}
+
+<nav>
+    <ul>
+        <li><a href="{{ trfile('index') }}">{{ tr("Home", "Accueil", "ホーム") }}</a></li>
+        <li><a href="https://github.com/cpcs-compiler/cpcsc/releases">{{ tr("Download", "Téléchargement", "ダウンロード") }}</a></li>
+        <li><a href="{{ trfile('community') }}">{{ tr("Community", "Communauté", "コミュニティ") }}</a></li>
+    </ul>
+</nav>

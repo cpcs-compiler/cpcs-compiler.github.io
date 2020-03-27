@@ -93,7 +93,5 @@ const fetchContributors = () => {
 /* init all */
 const init = () => {
   const date = new Date();
-
-  fetchContributors();
   showPride(date.getMonth());
 };

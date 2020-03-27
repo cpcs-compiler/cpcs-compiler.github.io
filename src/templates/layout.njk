@@ -6,7 +6,6 @@
         <title>CpcSC {% if title %}- {{ title }}{% endif %}</title>
 
         <link rel="stylesheet" href="assets/style.css">
-        <link rel="stylesheet" href="assets/highlight.css">
     </head>
     <body>
         <div id="pride">
@@ -20,7 +19,7 @@
         </div>
         <div id="alt-lang">
             <a {% if lang %} href="index.html" {% else %} class="disabled" {% endif %}>
-                <img class="retromoji" src="https://d0p1s4m4.github.io/retromoji/img/black_flag.png" aria-label="english">
+                <img class="retromoji" src="https://d0p1s4m4.github.io/retromoji/img/flag_great_britain.png" aria-label="english">
             </a>
             <a {% if lang == "fr" %} class="disabled" {% else %} href="index.fr.html" {% endif %}>
                 <img class="retromoji" src="https://d0p1s4m4.github.io/retromoji/img/flag_france.png" aria-label="french">
@@ -31,11 +30,12 @@
             <div class="clear"></div>
         </div>
         <main>
+            {% include "nav.njk" %}
             {% block main %}
             {% endblock %}
         </main>
         <footer>
-            <img class="retromoji mini" src="https://d0p1s4m4.github.io/retromoji/img/copyleft.png" aria-label="copyleft"> 2020 <a href="">d0p1</a>
+            <img class="retromoji mini" src="https://d0p1s4m4.github.io/retromoji/img/copyleft.png" aria-label="copyleft"> 2020 <a href="https://github.com/d0p1s4m4">d0p1</a>
         </footer>
     </body>
 
